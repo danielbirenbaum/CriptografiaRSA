@@ -28,7 +28,7 @@ namespace CriptografiaRSA
                         Console.Write("Digite a mensagem que iremos criptografar: ");
                         string message = Console.ReadLine();
                         
-                        Console.WriteLine("Mensagem:");
+                        Console.WriteLine("Mensagem criptografada:");
                         
                         byte[] encryptedMessage = Encrypt(message, rsaProvider);
                         Console.WriteLine(Convert.ToBase64String(encryptedMessage));
@@ -43,6 +43,9 @@ namespace CriptografiaRSA
                         break;
                     case 3:
                         loop = false;
+                        break;
+                    default:
+                        Console.WriteLine("Digite apenas 1,2 ou 3...");
                         break;
                 }
             }
